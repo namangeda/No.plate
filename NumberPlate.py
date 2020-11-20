@@ -1,6 +1,6 @@
 from cv2 import cv2
 
-platecascade = cv2.CascadeClassifier(r"C:\python\pythonProject\opencv\data\haarcascade_russian_plate_number.xml")
+platecascade = cv2.CascadeClassifier("data\haarcascade_russian_plate_number.xml")
 frameWidth  = 640
 frameHeight = 400
 livecap = cv2.VideoCapture(0)
@@ -21,6 +21,6 @@ while True:
             cv2.imshow("live cam", plateArea)
     cv2.imshow("live cam", img)        
     if cv2.waitKey(1) & 0xFF ==ord('s'):     # once it detected numeber plate press s to save the plate imge in directory as written in imwrite
-        cv2.imwrite(r"C:\python\pythonProject\opencv\data\scannedPlates\plate_"+str(count)+".jpg",plateArea)
+        cv2.imwrite("data\scannedPlates\plate_"+str(count)+".jpg",plateArea)
         count+= 1
         
