@@ -21,6 +21,6 @@ while True:
             cv2.imshow("live cam", plateArea)
     cv2.imshow("live cam", img)        
     if cv2.waitKey(1) & 0xFF ==ord('s'):     # once it detected numeber plate press s to save the plate imge in directory as written in imwrite
-        cv2.imwrite("data\scanned\plate_"+str(count)+".jpg",plateArea)
+        cv2.imwrite("data\scannedPlates\plate_"+str(count)+".jpg",plateArea)
         count+= 1
         
